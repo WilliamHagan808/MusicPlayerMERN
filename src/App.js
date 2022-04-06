@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import MusicTable from "./MusicTable/MusicTable";
 function App() {
   const [songs, setSongs] = useState([]);
 
@@ -9,22 +10,17 @@ function App() {
       let response = await axios.get(
         "http://www.devcodecampmusiclibrary.com/api/music"
       );
-      console.log(response.data);
       setSongs(response.data);
     } catch (error) {
       console.log(error);
     }
   };
-  <button onClick={getSongs}>click</button>
+
   return (
     <div className="App">
-  
-  
-  </div>
-);
+      <button onClick={getSongs}>Show Song</button>
+      <MusicTable songs = {songs}/>
+    </div>
+  );
 }
-
-
-
-
 export default App;
