@@ -22,7 +22,7 @@ function App() {
       <button onClick={getSongs}>Show Song</button>
       <MusicTable songs = {songs}/>
     <MusicTable songs={songs} />
-    <SearchBar setSongs={setSongs} songs={songs} />
+    <SearchBar setSongs={setSongs} getSongs={setSongs} songs={songs} />
     </div>
   );
 }

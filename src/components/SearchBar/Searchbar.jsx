@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 
 const SearchBar = (props) => {
-  const { songs, setSongs } = props;
+    const { songs, setSongs, getSongs } = props;
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    getSongs();
+
+    let results = songs.filter((song) => {
+      if (song.includes(searchTerm)) {
+        return song;
+      }
+    });
+    setSongs(results);
 
   }
   return (
