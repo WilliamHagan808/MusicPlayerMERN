@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import MusicTable from "./MusicTable/MusicTable";
-import SearchBar from "./SearchBar/Searchbar";
+import MusicTable from "./components/MusicTable/MusicTable.jsx";
+import SearchBar from "./components/SearchBar/Searchbar.jsx";
+import "./components/NavBar/NavBar.jsx";
 function App() {
   const [songs, setSongs] = useState([]);
 

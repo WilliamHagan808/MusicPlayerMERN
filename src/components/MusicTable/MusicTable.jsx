@@ -1,5 +1,5 @@
 import React from "react";
-import './MusicTable.css'
+
 
 const MusicTable = (props) => {
     const {songs} = props
